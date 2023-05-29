@@ -1,6 +1,6 @@
 {
-  "name": "vite-vue3-ts-component-template",
-  "description": "模板",
+  "name": "simple-baidu-tans",
+  "description": "百度翻译",
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/index.umd.cjs",
@@ -30,12 +30,14 @@
   "devDependencies": {
     "@types/jest": "^29.5.1",
     "@types/lodash": "^4.14.194",
+    "@types/node": "^20.2.5",
     "@types/prismjs": "^1.26.0",
     "@types/uuid": "^9.0.1",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vueuse/core": "^10.1.0",
+    "axios": "^1.4.0",
     "babel-jest": "^29.5.0",
     "element-plus": "^2.3.4",
     "eslint": "^8.39.0",
@@ -44,6 +46,7 @@
     "jest": "^29.5.0",
     "lint-staged": "^13.2.2",
     "lodash": "^4.17.21",
+    "md5": "^2.3.0",
     "moment": "^2.29.4",
     "postcss-html": "^1.5.0",
     "postcss-scss": "^4.0.6",
@@ -65,7 +68,8 @@
     "vue-tsc": "^1.4.2"
   },
   "peerDependencies": {
-    "vue": "3.x"
+    "axios": "*",
+    "md5": "*"
   },
   "author": {
     "name": "lvliqi",
@@ -77,7 +81,8 @@
     "url": ""
   },
   "keywords": [
-    "vue",
-    "vue3"
+    "baidu-tans",
+    "baidu",
+    "tans"
   ]
 }
