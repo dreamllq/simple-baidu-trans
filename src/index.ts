@@ -1,7 +1,7 @@
 import axios from 'axios';
 import md5 from 'md5';
 
-export class BaiduTrans {
+export default class BaiduTrans {
   appid: string;
   key: string;
   from: string;
@@ -14,7 +14,7 @@ export class BaiduTrans {
     this.to = to;
   }
 
-  async tran(query: string) {
+  async tran(query: string): Promise<string> {
     const salt = (new Date).getTime();
     const str1 = this.appid + query + salt + this.key;
     const sign = md5(str1);
