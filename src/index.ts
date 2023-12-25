@@ -18,7 +18,7 @@ export default class BaiduTrans {
     const salt = (new Date).getTime();
     const str1 = this.appid + query + salt + this.key;
     const sign = md5(str1);
-    const url = `http://api.fanyi.baidu.com/api/trans/vip/translate?q=${query}&appid=${this.appid}&salt=${salt}&from=${this.from}&to=${this.to}&sign=${sign}`;
+    const url = `http://api.fanyi.baidu.com/api/trans/vip/translate?q=${encodeURIComponent(query)}&appid=${this.appid}&salt=${salt}&from=${this.from}&to=${this.to}&sign=${sign}`;
     const res = await axios.get(url);
     return res.data.trans_result[0].dst;
   }
